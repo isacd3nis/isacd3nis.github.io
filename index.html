@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Try</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <ul class="topnav">
+            <li id="logo" class="current"><a href="#" data-hover="isacd3nis">isacd3nis</a></li>
+            <li><a href="#about" data-hover="About">About</a></li>
+            <li><a href="#services" data-hover="Services">Services</a></li>
+            <li><a href="#contact" data-hover="Contact">Contact</a></li>
+        </ul>
+    </div>
+    <about>
+        <div id="about">
+            <h1>Salut, eu ma numesc Denis</h1>
+            <img class="meimg" src="https://vibe.md/wp-content/uploads/2023/08/Isac-Den.jpg" alt="">
+        </div>
+    </about>
+
+    <services>
+        <div id="services">
+            <p>zis is <b>services</b> paij</p>
+        </div>
+    </services>
+
+    <contact>
+        <div id="contact">
+            <p>fainali, hir iz <b>contact</b> paij</p>
+        </div>
+    </contact>
+
+    <script>
+        const menuItems = document.querySelectorAll('.topnav li');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove the 'current' class from all items
+                menuItems.forEach(item => {
+                    item.classList.remove('current');
+                });
+
+                // Add the 'current' class to the clicked item
+                item.classList.add('current');
+            });
+        });
+    </script>
+</body>
+</html>
